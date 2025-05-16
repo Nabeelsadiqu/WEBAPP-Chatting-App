@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebChat - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'Signup.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-container">
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+                <h1>WebChat</h1>
+                <p>Create your account to start chatting</p>
+            </div>
+
+            {% if error %}
+                <p style="color: red; text-align:center;">{{ error }}</p>
+            {% endif %}
+
+            <form method="post" class="signup-form" id="signupForm">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-at"></i>
+                        <input type="text" name="username" id="username" placeholder="Choose a username" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Create a password" required>
+                        <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                    </div>
+                    <div class="password-strength">
+                        <span id="strengthText">Password strength: weak</span>
+                        <div class="strength-meter">
+                            <div class="strength-meter-fill" id="strengthMeter"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="agree-terms" required>
+                    <label for="agree-terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="signup-btn" id="signupBtn">Create Account</button>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <button type="button" class="google-btn">
+                    <i class="fab fa-google"></i> Sign up with Google
+                </button>
+
+                <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+            </form>
+        </div>
+
+        <div class="welcome-section">
+            <h2>Start Private Conversations</h2>
+            <p>Join WebChat today and connect with friends through secure, real-time messaging.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>End-to-End Encryption</h3>
+                    <p>Your messages are secured with advanced encryption.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Private Chats</h3>
+                    <p>One-on-one conversations that stay between you and your friend.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-smile"></i>
+                    <h3>Easy to Use</h3>
+                    <p>Simple interface that lets you focus on your conversations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
