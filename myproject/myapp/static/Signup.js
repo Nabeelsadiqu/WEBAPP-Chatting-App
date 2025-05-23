@@ -76,6 +76,6 @@
             setTimeout(() => {
                 alert('Account created successfully! Redirecting to login...');
                 // In a real app, you would redirect to login page
-                // window.location.href = 'login.html';
+                window.location.href = 'Login.html';
             }, 1500);
         });
