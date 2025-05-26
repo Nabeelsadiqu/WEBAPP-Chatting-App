@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebChat | Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'Chatpage/Chatpage.css' %}">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-comments"></i>
+            <h2>WebChat</h2>
+            <div class="settings-icon" id="settingsIcon">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+
+        <div class="settings-menu" id="settingsMenu">
+            <ul>
+                <li id="accountBtn"><i class="fas fa-user"></i> Account</li>
+                <li id="inviteBtn"><i class="fas fa-user-plus"></i> Invite Friends</li>
+                <li id="helpBtn"><i class="fas fa-question-circle"></i> Help</li>
+                <li id="signOutBtn"><i class="fas fa-sign-out-alt"></i> Sign Out</li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search users...">
+        </div>
+
+        <div class="users-list">
+            <!-- Example Users -->
+            <div class="user-item active">
+                <div class="user-avatar">N</div>
+                <div class="user-info">
+                    <div class="user-name">Nabeel</div>
+                    <div class="user-status"><span class="status-dot"></span><span>Online</span></div>
+                    <div class="last-message">Hi there! This is the start of your conversation with Nabeel.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="add-friend-btn" id="addFriendBtn">
+        <i class="fas fa-user-plus"></i>
+    </button>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+        <div class="chat-header">
+            <div class="user-avatar" id="userAvatar">N</div>
+            <div class="chat-header-info">
+                <div class="chat-user-name" id="userName">Nabeel</div>
+                <div class="chat-user-status" id="userStatus">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Online</span>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <i class="fas fa-phone-alt"></i>
+                <i class="fas fa-video"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Example Messages -->
+            <div class="message received">
+                <div class="message-content">Hey there! How are you doing today?</div>
+                <div class="message-time">10:30 AM</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-content">I'm doing great! Just working on this new chat app.</div>
+                <div class="message-time">10:32 AM</div>
+            </div>
+
+            <div class="message received">
+                <div class="message-content">That sounds interesting! What features does it have?</div>
+                <div class="message-time">10:33 AM</div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-content">It has a sidebar with contacts, real-time messaging, and a clean UI.</div>
+                <div class="message-time">10:34 AM</div>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <div class="attachment-container">
+                <i class="fas fa-paperclip attachment-btn" id="attachmentBtn"></i>
+                <div class="attachment-popup" id="attachmentPopup">
+                    <div class="attachment-option"><i class="fas fa-image"></i> Photo</div>
+                    <div class="attachment-option"><i class="fas fa-video"></i> Video</div>
+                    <div class="attachment-option"><i class="fas fa-music"></i> Audio</div>
+                    <div class="attachment-option"><i class="fas fa-user"></i> Contact</div>
+                    <div class="attachment-option"><i class="fas fa-map-marker-alt"></i> Location</div>
+                </div>
+            </div>
+            <textarea class="message-input" placeholder="Type a message..." rows="1" id="messageInput"></textarea>
+            <button class="send-btn" id="sendBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="{% static 'Chatpage/Chatpage.js' %}"></script>
+</body>
+</html>

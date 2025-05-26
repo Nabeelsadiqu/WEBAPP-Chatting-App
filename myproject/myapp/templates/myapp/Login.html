@@ -19,6 +19,9 @@
                 <h1>WebChat</h1>
                 <p>Connect and chat with your friends privately</p>
             </div>
+            {% if error %}
+                <p style="color: red; text-align:center;">{{ error }}</p>
+            {% endif %}
             
             <!-- Django form with csrf_token -->
             <form class="login-form" method="POST" action="{% url 'login' %}">
@@ -43,7 +46,7 @@
                     <label class="remember-me">
                         <input type="checkbox" name="remember"> Remember me
                     </label>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <a href="{% url 'resetaccount' %}" class="forgot-password">Forgot password?</a>
                 </div>
                 
                 <button type="submit" class="login-btn">Login</button>

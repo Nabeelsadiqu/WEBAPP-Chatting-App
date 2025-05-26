@@ -1,0 +1,210 @@
+ /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Header */
+        .invite-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .invite-header i {
+            font-size: 50px;
+            color: #4a6bff;
+            margin-bottom: 15px;
+        }
+
+        .invite-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .invite-header p {
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Invite Card */
+        .invite-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Email Invite Method */
+        .email-invite {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #eef2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            color: #4a6bff;
+            font-size: 24px;
+        }
+
+        .email-invite h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .email-invite p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .method-btn {
+            background-color: #4a6bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .method-btn:hover {
+            background-color: #3a5bef;
+        }
+
+        /* Invite Link Section */
+        .link-section {
+            margin-top: 30px;
+        }
+
+        .link-section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .link-section h2 i {
+            margin-right: 10px;
+            color: #4a6bff;
+        }
+
+        .link-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .link-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            font-size: 14px;
+            background-color: #f9f9f9;
+        }
+
+        .copy-btn {
+            background-color: #4a6bff;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #3a5bef;
+        }
+
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .twitter {
+            background-color: #1da1f2;
+        }
+
+        .whatsapp {
+            background-color: #25d366;
+        }
+
+        .telegram {
+            background-color: #0088cc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .invite-card {
+                padding: 20px;
+            }
+            
+            .link-container {
+                flex-direction: column;
+            }
+            
+            .link-input {
+                border-radius: 8px 8px 0 0;
+                margin-bottom: 1px;
+            }
+            
+            .copy-btn {
+                border-radius: 0 0 8px 8px;
+                padding: 12px;
+            }
+        }

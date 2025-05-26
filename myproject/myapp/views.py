@@ -7,10 +7,19 @@ def login_view(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
+        remember_me = request.POST.get("remember") 
 
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+
+            # If "Remember Me" is checked
+            if not remember_me:
+                # Session will expire when browser is closed
+                request.session.set_expiry(0)
+            else:
+                # Session will expire in 1 Day
+                request.session.set_expiry(86400)
             return redirect('chat')
         else:
             return render(request, 'myapp/login.html', {'error': 'Invalid credentials'})

@@ -1,0 +1,189 @@
+ /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Header */
+        .account-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .account-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #4a6bff;
+            margin-bottom: 10px;
+        }
+
+        .account-header p {
+            color: #666;
+        }
+
+        /* Account Card */
+        .account-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        /* Profile Picture Section */
+        .profile-picture {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e0e0e0;
+        }
+
+        .change-avatar-btn {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4a6bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .change-avatar-btn:hover {
+            background-color: #3a5bef;
+        }
+
+        .avatar-hint {
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+        }
+
+        /* Form Styles */
+        .account-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .account-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .account-form input, 
+        .account-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border 0.3s;
+        }
+
+        .account-form input:focus, 
+        .account-form textarea:focus {
+            outline: none;
+            border-color: #4a6bff;
+        }
+
+        .account-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .username-availability {
+            font-size: 12px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .username-availability.available {
+            color: #4caf50;
+        }
+
+        .username-availability.taken {
+            color: #f44336;
+        }
+
+        .username-availability i {
+            margin-right: 5px;
+        }
+
+        /* Save Button */
+        .save-btn {
+            background-color: #4a6bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .save-btn:hover {
+            background-color: #3a5bef;
+        }
+
+        .save-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .account-card {
+                padding: 20px;
+            }
+            
+            .profile-avatar {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .change-avatar-btn {
+                width: 35px;
+                height: 35px;
+            }
+        }

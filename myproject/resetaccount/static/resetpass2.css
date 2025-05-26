@@ -1,0 +1,146 @@
+
+    /* Global Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background-color: #f5f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .password-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .password-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .password-header i {
+        font-size: 40px;
+        color: #4a6bff;
+        margin-bottom: 15px;
+    }
+
+    .password-header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .password-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .input-with-icon {
+        position: relative;
+    }
+
+    .input-with-icon i {
+        position: absolute;
+        margin-left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #777;
+    }
+
+    .input-with-icon input {
+        width: 100%;
+        padding: 12px 15px 12px 45px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    .input-with-icon input:focus {
+        outline: none;
+        border-color: #4a6bff;
+    }
+
+    .password-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #777;
+        cursor: pointer;
+    }
+
+    .password-strength {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .strength-meter {
+        height: 4px;
+        background-color: #eee;
+        border-radius: 2px;
+        margin-top: 5px;
+        overflow: hidden;
+    }
+
+    .strength-bar {
+        height: 100%;
+        width: 0%;
+        background-color: #ff4757;
+        transition: width 0.3s, background-color 0.3s;
+    }
+
+    .error-message {
+        color: #ff4757;
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .submit-btn {
+        background-color: #4a6bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+        background-color: #3a5bef;
+    }
+
+    .back-to-login {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .back-to-login a {
+        color: #4a6bff;
+        text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+        .password-container {
+            padding: 30px 20px;
+            margin: 20px;
+        }
+    }
