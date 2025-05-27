@@ -169,15 +169,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Sign out and account
     document.getElementById('signOutBtn').addEventListener('click', () => {
-        window.location.href = 'Login.html';
+        window.location.href = "{% url 'logout' %}";  // use the name of your logout URL
     });
 
     document.getElementById('accountBtn').addEventListener('click', () => {
-        window.location.href = "{% url 'user_account' %}";
+        window.location.href = "{% url 'user_account' %}";  // points to your account view
     });
-    
+
     document.getElementById('inviteBtn').addEventListener('click', () => {
-        window.location.href = 'Userinvite.html';
+        window.location.href = "{% url 'user_invite' %}";  // name of invite page URL
+    });
+
+    document.getElementById('helpBtn').addEventListener('click', () => {
+        window.location.href = 'Help.html';
+    });
+
+    document.getElementById('addFriendBtn').addEventListener('click', () => {
+        window.location.href = 'Adduser.html';
     });
 
 
@@ -202,10 +210,3 @@ document.addEventListener('click', () => {
 
 // Prevent popup from closing when clicked inside
 attachmentPopup.addEventListener('click', (e) => e.stopPropagation());
-
-document.getElementById('addFriendBtn').addEventListener('click', () => {
-        window.location.href = 'Adduser.html';
-    });
-document.getElementById('helpBtn').addEventListener('click', () => {
-        window.location.href = 'Help.html';
-    });    

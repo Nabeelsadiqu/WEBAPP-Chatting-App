@@ -1,0 +1,284 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Help Header */
+.help-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.help-header i {
+    font-size: 50px;
+    color: #4a6bff;
+    margin-bottom: 15px;
+}
+
+.help-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.help-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Section */
+.search-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    padding-right: 120px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    background-color: #4a6bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #3a5bef;
+}
+
+/* Help Content */
+.help-content {
+    display: flex;
+    gap: 30px;
+}
+
+/* Categories Sidebar */
+.help-sidebar {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+
+.sidebar-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #4a6bff;
+}
+
+.sidebar-links a {
+    display: block;
+    padding: 10px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.sidebar-links a:hover {
+    background-color: #f5f7fa;
+    color: #4a6bff;
+}
+
+/* FAQ Section */
+.faq-section {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-category {
+    margin-bottom: 40px;
+}
+
+.faq-category h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #4a6bff;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+    padding: 15px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: #4a6bff;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 15px 0;
+    color: #666;
+}
+
+.faq-answer p {
+    margin-bottom: 10px;
+}
+
+.expand-icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4a6bff;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #4a6bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a5bef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .help-content {
+        flex-direction: column;
+    }
+
+    .help-sidebar {
+        width: 100%;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        padding-right: 15px;
+    }
+
+    .search-btn {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+}
+.alert-container {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+}

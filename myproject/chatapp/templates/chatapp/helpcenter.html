@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebChat - Help Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'helpcenter/helpcenter.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="help-header">
+            <i class="fas fa-life-ring"></i>
+            <h1>WebChat Help Center</h1>
+            <p>Find answers to common questions or contact our support team</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search help articles...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+
+        <div class="help-content">
+            <div class="help-sidebar">
+                <div class="sidebar-section">
+                    <h3>Popular Topics</h3>
+                    <div class="sidebar-links">
+                        <a href="#getting-started">Getting Started</a>
+                        <a href="#account">Account Settings</a>
+                        <a href="#messaging">Messaging</a>
+                        <a href="#privacy">Privacy & Security</a>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Quick Links</h3>
+                    <div class="sidebar-links">
+                        <a href="#contact">Contact Support</a>
+                        <a href="#faq">FAQs</a>
+                        <a href="#troubleshooting">Troubleshooting</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <div class="faq-category" id="getting-started">
+                    <h2>Getting Started</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I create an account?</span>
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To create an account, click the 'Sign Up' button on the login page and follow the registration process.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category" id="account">
+                    <h2>Account Settings</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I change my password?</span>
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can change your password in the Account Settings page under the Security section.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category" id="messaging">
+                    <h2>Messaging</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I start a new chat?</span>
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Click the 'New Chat' button and select a contact to start a conversation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section" id="contact">
+            <h2>Contact Support</h2>
+            <form class="contact-form" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group full-width">
+                    <label>Message</label>
+                    {{ form.message }}
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  {% if messages %}
+<div class="alert-container">
+    {% for message in messages %}
+    <div class="alert success">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+    <script src="{% static 'helpcenter/helpcenter.js' %}"></script>
+</body>
+</html>
