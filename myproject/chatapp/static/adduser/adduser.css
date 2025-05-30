@@ -1,0 +1,156 @@
+/* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4a6bff, #6a5acd);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        .home-content {
+            max-width: 600px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo i {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .logo h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .logo p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Friend URL Input */
+        .friend-url-container {
+            margin: 25px 0;
+            width: 100%;
+        }
+
+        .friend-url-input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .friend-url-input:focus {
+            outline: none;
+            background-color: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .friend-url-input::placeholder {
+            color: #aaa;
+        }
+
+        /* Start Chat Button */
+        .start-chat-btn {
+            display: inline-block;
+            background-color: white;
+            color: #4a6bff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .start-chat-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .start-chat-btn:active {
+            transform: translateY(1px);
+        }
+
+        .start-chat-btn i {
+            margin-left: 8px;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .divider-text {
+            padding: 0 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .home-content {
+                padding: 30px 20px;
+                width: 90%;
+            }
+
+            .logo i {
+                font-size: 50px;
+            }
+
+            .logo h1 {
+                font-size: 28px;
+            }
+
+            .logo p {
+                font-size: 16px;
+            }
+
+            .friend-url-input {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .start-chat-btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }

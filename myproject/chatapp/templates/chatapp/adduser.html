@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebChat - Connect Instantly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'adduser/adduser.css' %}">
+</head>
+<body>
+    <div class="home-content">
+        <div class="logo">
+            <i class="fas fa-comments"></i>
+            <h1>WebChat</h1>
+            <p>Start private, secure conversations instantly</p>
+        </div>
+        
+        <div class="friend-url-container">
+            <input type="text" class="friend-url-input" id="friendUrl" placeholder="Enter your friend's WebChat Link...">
+        </div>
+        
+        <button class="start-chat-btn" onclick="startChat()">
+            Connect to Friend <i class="fas fa-user-friends"></i>
+        </button>
+
+        {# Uncomment if needed later #}
+        {#
+        <div class="divider">
+            <span class="divider-text">OR</span>
+        </div>
+        
+        <button class="start-chat-btn" onclick="createNewChat()">
+            Create New Chat <i class="fas fa-plus"></i>
+        </button>
+        #}
+    </div>
+
+    <script src="{% static 'adduser/adduser.js' %}"></script>
+</body>
+</html>

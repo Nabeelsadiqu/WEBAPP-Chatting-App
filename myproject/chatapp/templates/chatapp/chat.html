@@ -22,9 +22,9 @@
 
         <div class="settings-menu" id="settingsMenu">
             <ul>
-                <li id="accountBtn"><i class="fas fa-user"></i> Account</li>
-                <li id="inviteBtn"><i class="fas fa-user-plus"></i> Invite Friends</li>
-                <li id="helpBtn"><i class="fas fa-question-circle"></i> Help</li>
+                <li id="accountBtn" data-url="{% url 'user_account' %}"><i class="fas fa-user"></i> Account</li>
+                <li id="inviteBtn"  data-url="{% url 'user_invite' %}"><i class="fas fa-user-plus"></i> Invite Friends</li>
+                <li id="helpBtn"    data-url="{% url 'helpcenter' %}"><i class="fas fa-question-circle"></i> Help</li>
                 <li id="signOutBtn"><i class="fas fa-sign-out-alt"></i> Sign Out</li>
             </ul>
         </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <button class="add-friend-btn" id="addFriendBtn">
+    <button class="add-friend-btn" id="addFriendBtn" data-url="{% url 'adduser' %}">
         <i class="fas fa-user-plus"></i>
     </button>
 

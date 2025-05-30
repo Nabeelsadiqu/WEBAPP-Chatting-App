@@ -167,27 +167,33 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', () => settingsMenu.style.display = 'none');
     settingsMenu.addEventListener('click', e => e.stopPropagation());
 
+    
+    document.getElementById('accountBtn').addEventListener('click', () => {
+        // window.location.href = "{% url 'user_account' %}";  // points to your account view
+        const url = document.getElementById('accountBtn').getAttribute('data-url');
+        window.location.href = url;
+    });
+    
+    document.getElementById('inviteBtn').addEventListener('click', () => {
+        // window.location.href = "{% url 'user_invite' %}";  // name of invite page URL
+        const url = document.getElementById('inviteBtn').getAttribute('data-url');
+        window.location.href = url;
+    });
+
+    document.getElementById('helpBtn').addEventListener('click', () => {
+        const url = document.getElementById('helpBtn').getAttribute('data-url');
+        window.location.href = url;
+    });
+    
     // Sign out and account
     document.getElementById('signOutBtn').addEventListener('click', () => {
         window.location.href = "{% url 'logout' %}";  // use the name of your logout URL
     });
-
-    document.getElementById('accountBtn').addEventListener('click', () => {
-        window.location.href = "{% url 'user_account' %}";  // points to your account view
-    });
-
-    document.getElementById('inviteBtn').addEventListener('click', () => {
-        window.location.href = "{% url 'user_invite' %}";  // name of invite page URL
-    });
-
-    document.getElementById('helpBtn').addEventListener('click', () => {
-        window.location.href = 'Help.html';
-    });
-
+    
     document.getElementById('addFriendBtn').addEventListener('click', () => {
-        window.location.href = 'Adduser.html';
+        const url = document.getElementById('addFriendBtn').getAttribute('data-url');
+        window.location.href = url;
     });
-
 
     // Initial scroll to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight;
