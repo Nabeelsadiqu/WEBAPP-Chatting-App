@@ -41,7 +41,7 @@ Frontend-
 ⚙️ Setup Instructions
 
 Clone the Repository:-
-git clone https://github.com/yourusername/webchat.git
+git clone (https://github.com/Nabeelsadiqu/WEBAPP-Chatting-App.git)
 cd webchat
 
 Create Virtual Environment
